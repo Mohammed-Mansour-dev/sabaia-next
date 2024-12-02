@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.con_btn::before{
+content: "";
+@apply absolute duration-500 transition-all bottom-0 rounded-tr-full bg-neutral-900 -z-10 left-0 w-0 h-0
+
+}
+.con_btn::after{
+content: "";
+@apply absolute duration-500 transition-all rounded-bl-full bg-neutral-900 -z-10 right-0 top-0 w-0 h-0
+
+}
+
+.con_btn::after:hover{
+
+    @apply !w-full !h-full
+}
+
+.con_btn::before:hover{
+
+    @apply !w-full !h-full
+}
+
+@keyframes bouncea {
+    0% {
+      top: 30px;
+      height: 5px;
+      border-radius: 60px 60px 20px 20px;
+      transform: scaleX(2);
+    }
+    35% {
+      height:15px;
+      border-radius: 50%;
+      transform: scaleX(1);
+    }
+    100% {
+      top: 0;
+    }
+  }
