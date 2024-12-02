@@ -2,7 +2,7 @@
 
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
 
-const SalesRecharts = ({data}:{data:any[]}) => {
+const SalesRecharts = ({data}:{data:any}) => {
   return (
    
 <div className="">

@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Command, CommandGroup, CommandInput, CommandItem, CommandList } from '../ui/command';
-import { Badge } from '../ui/badge';
+
 import { X } from 'lucide-react';
 
 
