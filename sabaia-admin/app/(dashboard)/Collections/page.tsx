@@ -22,7 +22,7 @@ const [loading , setLoading ] = useState(false)
 const getCollections_ = async ()=>{
 try {
     setLoading(true)
-const res = await fetch(`${process.env.NEXT_PUBLIC_ADMIN_URL}/api/collection`,{
+const res = await fetch(`/api/collection`,{
     method: 'GET'
 });
 const data = await res.json();
@@ -54,7 +54,7 @@ useEffect(()=>{
 {/* head */}
 <div className="">
 {/* title & create collection button */}
- <div className="flex items-center pb-5 justify-between " >
+ <div className="flex items-center pb-5 gap-3 justify-between " >
   <h1 className="text-heading2-bold text-grey-1 font-bold ">Collections</h1>
 
 <Button onClick={()=> router.push("Collections/New")} className="bg-blue-1 text-white

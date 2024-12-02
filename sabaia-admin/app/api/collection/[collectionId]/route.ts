@@ -23,6 +23,7 @@ await connectDB();
 const {collectionId} = await params;
 
 await CollectionModal.findByIdAndDelete(collectionId)
+await ProductModal.updateMany({collections:collectionId},{ $pull : {collections :collectionId}})
 
 return new NextResponse("collection deleted",{status:200})
     
@@ -47,7 +48,6 @@ if(!collection){
     return new NextResponse(JSON.stringify({message :"Collection Not Found"}),{status:404})
 }
 
-await ProductModal.updateMany({collections:collectionId},{ $pull : {collections :collectionId}})
 
 
 return  NextResponse.json(collection ,{status:200})

@@ -17,7 +17,7 @@ const [loading , setLoading ] = useState(false)
 const getCollecDetails_ = async () =>{
   try {
     setLoading(true)
-const res =await fetch(`${process.env.NEXT_PUBLIC_ADMIN_URL}/api/collection/${id}`,{
+const res =await fetch(`/api/collection/${id}`,{
   method: 'GET'
 })
 

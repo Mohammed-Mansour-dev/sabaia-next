@@ -17,7 +17,7 @@ const [customers , setCustomers ] = useState([])
 const getCustomers_ = async () => {
   try {
     setLoading(true);
-    const res = await fetch(`${process.env.NEXT_PUBLIC_ADMIN_URL}/api/customers`);
+    const res = await fetch(`/api/customers`);
     const customers = await res.json();
 setCustomers(customers)
 setLoading(false);

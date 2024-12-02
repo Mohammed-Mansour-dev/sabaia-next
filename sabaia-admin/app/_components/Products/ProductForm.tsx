@@ -238,7 +238,7 @@ useEffect(()=>{
           />
 
 {/* price & expense & categoty & tags */}
-<div className="md:grid grid-cols-3 space-y-5">
+<div className="md:grid grid-cols-3 gap-3 max-md:space-y-7 ">
  {/* price */}
  <FormField
           control={form.control}

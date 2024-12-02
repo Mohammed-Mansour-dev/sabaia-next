@@ -12,7 +12,7 @@ const [singleProData , setSingleProData ] = useState<productFormPropsType | null
 
 const getSinglePro_ = async ()=>{
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_ADMIN_URL}/api/products/${productId}`,{
+        const res = await fetch(`/api/products/${productId}`,{
             method:"GET"
         });
     
