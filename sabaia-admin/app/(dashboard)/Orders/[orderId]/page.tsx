@@ -2,9 +2,9 @@ import { columns } from '@/app/_components/Orders/OrderItemColumn';
 import { DataTable } from '@/components/CustomUi/DataTable';
 import React from 'react'
 
-const SingleOrderPage = async ({params} :{params :{ orderId :string }}) => {
+const SingleOrderPage = async ({params}:{params:any}) => {
 
-const {orderId} = params
+const {orderId} = await params
 
 
 const res = await  fetch(`${process.env.NEXT_PUBLIC_ADMIN_URL}/api/orders/${orderId}`)
