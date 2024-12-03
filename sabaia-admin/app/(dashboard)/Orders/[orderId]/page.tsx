@@ -2,7 +2,7 @@ import { columns } from '@/app/_components/Orders/OrderItemColumn';
 import { DataTable } from '@/components/CustomUi/DataTable';
 import React from 'react'
 
-const SingleOrderPage = async ({params} :{params :{orderId:string}}) => {
+const SingleOrderPage = async ({params} :{params :{ orderId :string }}) => {
 
 const {orderId} =await params
 
