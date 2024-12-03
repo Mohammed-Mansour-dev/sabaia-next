@@ -4,7 +4,7 @@ import React from 'react'
 
 const SingleOrderPage = async ({params} :{params :{ orderId :string }}) => {
 
-const {orderId} =await params
+const {orderId} = params
 
 
 const res = await  fetch(`${process.env.NEXT_PUBLIC_ADMIN_URL}/api/orders/${orderId}`)
