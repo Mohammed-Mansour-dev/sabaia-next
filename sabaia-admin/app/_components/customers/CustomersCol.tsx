@@ -2,7 +2,7 @@
 "use client"
 
 import {ColumnDef} from "@tanstack/react-table"
-import Link from "next/link"
+
 
 
 

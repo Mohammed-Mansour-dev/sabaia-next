@@ -81,7 +81,7 @@ rounded-md
  w-full' >
     <CommandGroup >
     {
-      selectables.map((collection ,index)=>(
+      selectables.map((collection )=>(
 <CommandItem     key={collection._id}
                 onMouseDown={(e) => e.preventDefault()}
                 onSelect={() => {

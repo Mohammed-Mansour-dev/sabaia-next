@@ -6,7 +6,6 @@ import { Plus, Trash } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { strict } from "assert";
 
 interface ImageUploadProps {
   value: string[];
