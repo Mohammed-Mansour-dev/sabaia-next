@@ -6,6 +6,7 @@ import { Plus, Trash } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { strict } from "assert";
 
 interface ImageUploadProps {
   value: string[];
@@ -13,18 +14,19 @@ interface ImageUploadProps {
   onRemove: (value: string) => void;
 }
 
+
 const ImageUpload: React.FC<ImageUploadProps> = ({
   onChange,
   onRemove,
   value,
 }) => {
-const [imgs , setImgs ] = useState<any>([])
+const [imgs , setImgs ] = useState<string[]>([])
 
-  
 
-const onUploada = (result: any) => {
+
+const onUploada = (result:any) => {
   // Only update `imgs`, and let `useEffect` handle `onChange`
-  setImgs((prevImgs:any) => [...prevImgs, result.info.secure_url]);
+  setImgs((prevImgs:string[]) => [...prevImgs, result.info.secure_url]);
   onChange(imgs);
 
 };

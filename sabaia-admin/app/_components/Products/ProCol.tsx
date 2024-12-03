@@ -5,8 +5,7 @@ import {ColumnDef} from "@tanstack/react-table"
 import Link from "next/link"
 
 
-
-export const columns: ColumnDef<productFormPropsType>[] = [
+export const columns: ColumnDef<ProTypeWithCollec>[] = [
     {
       accessorKey: "title",
       header: "Title",
@@ -22,8 +21,8 @@ export const columns: ColumnDef<productFormPropsType>[] = [
     {
       accessorKey: "collections",
       header: "Collections",
-      cell:({row})=> <div>{row.original.collections.map((item: any,index)=>(
-      <p key={index} >{item.title}</p>))}</div>
+      cell: ({ row })=><div>{row.original.collections.map((item)=>
+        <p key={item._id} >{item.title}</p>)}</div>
     },
     {
         accessorKey: "price",

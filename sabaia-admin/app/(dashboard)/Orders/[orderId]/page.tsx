@@ -2,7 +2,7 @@ import { columns } from '@/app/_components/Orders/OrderItemColumn';
 import { DataTable } from '@/components/CustomUi/DataTable';
 import React from 'react'
 
-const page = async ({params} :{params :{orderId:string}}) => {
+const SingleOrderPage = async ({params} :{params :{orderId:string}}) => {
 
 const {orderId} =await params
 
@@ -52,5 +52,5 @@ const formattedAddress = [ street ,city ,state ,postalCode ,country ].filter(Boo
   )
 }
 
-export default page
+export default SingleOrderPage
 export const dynamic = "force-dynamic";

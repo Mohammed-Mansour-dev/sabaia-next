@@ -43,7 +43,7 @@ const formSchema = z.object({
 
 
 interface proFormPropsType {
-  initialData?: productFormPropsType | null;
+  initialData?: ProTypeWithCollec | null;
 }
 
 const ProductForm :React.FC<proFormPropsType> = ({initialData}) => {
@@ -143,7 +143,7 @@ useEffect(()=>{
     if (initialData) {
       form.reset({
         ...initialData,
-        collections: initialData.collections.map((collection: any) => collection._id),
+        collections: initialData.collections.map((collection: CollectionType) => collection._id),
       });
     }
   }, [initialData]);

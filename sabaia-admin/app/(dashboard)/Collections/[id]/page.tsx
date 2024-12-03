@@ -8,7 +8,7 @@ import toast from "react-hot-toast"
 
 
 
-const page =  () => {
+const SingleCollecPage =  () => {
 
  const {id} =useParams()
 const [collecDetails , setCollecDetails ] = useState<CollectionType | null>(null)
@@ -42,4 +42,4 @@ useEffect(() =>{
   )
 }
 
-export default page
+export default SingleCollecPage

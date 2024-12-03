@@ -23,6 +23,21 @@ collections : [string],
   createdAt : Date,
   updatedAt: Date,
 }
+interface ProTypeWithCollec {
+  _id: string;
+  title: string;
+  description: string;
+  media: [string];
+  price: number;
+  expense: number;
+  colors: [string];
+  sizes: [string];
+  tags: [string];
+  category: string;
+  collections: CollectionType[] ;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 
 
@@ -41,7 +56,10 @@ type CustomerType ={
 }
 
 
-
+type GraphDataType ={
+  name:string;
+  sales:number;
+}
 
 
 

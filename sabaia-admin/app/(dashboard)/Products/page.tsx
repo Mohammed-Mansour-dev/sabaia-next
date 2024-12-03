@@ -10,7 +10,7 @@ import { useRouter} from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
-const Products = () => {
+const ProductsPage = () => {
 
 const [loading , setLoading] = useState(false)
 const router =useRouter();
@@ -75,4 +75,4 @@ useEffect(()=>{
   )
 }
 
-export default Products
+export default ProductsPage

@@ -18,7 +18,6 @@ if(!userId){
 // connect to the database
 await connectDB()
 
-
 // check if collection exists
 const {title, description , image} =await req.json();
 const isExistingCollec = await CollectionModal.findOne({title:title});

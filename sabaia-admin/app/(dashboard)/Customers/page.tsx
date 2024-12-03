@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 
 
-const page =  () => {
+const CustomersPage =  () => {
 
 const [loading , setLoading ] = useState(false)
 const [customers , setCustomers ] = useState([])
@@ -47,5 +47,5 @@ useEffect(()=>{
   )
 }
 
-export default page
+export default CustomersPage
 export const dynamic = "force-dynamic";

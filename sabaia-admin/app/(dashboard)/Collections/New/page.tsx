@@ -1,7 +1,7 @@
 import CollecForm from '@/app/_components/CollectionForm.tsx/CollecForm'
 import React from 'react'
 
-const page = () => {
+const NewCollecPage = () => {
   return (
     <div>
 <CollecForm />
@@ -11,4 +11,4 @@ const page = () => {
   )
 }
 
-export default page
+export default NewCollecPage

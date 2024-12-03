@@ -5,10 +5,10 @@ import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 
-const page =  () => {
+const SingleProPage =  () => {
 
 const {productId}  =  useParams();
-const [singleProData , setSingleProData ] = useState<productFormPropsType | null>(null)
+const [singleProData , setSingleProData ] = useState<ProTypeWithCollec | null>(null)
 
 const getSinglePro_ = async ()=>{
     try {
@@ -39,4 +39,4 @@ getSinglePro_()
   )
 }
 
-export default page
+export default SingleProPage

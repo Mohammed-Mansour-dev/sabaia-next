@@ -1,8 +1,5 @@
 import mongoose from "mongoose";
 
-
-
-
 const collectionSchema =new mongoose.Schema({
     title: {
         type: String,
@@ -29,14 +26,5 @@ const collectionSchema =new mongoose.Schema({
     }
 })
 
-
 const CollectionModal = mongoose.models.Collection || mongoose.model("Collection",collectionSchema)
-
-
 export default CollectionModal;
-
-
-
-
-
-

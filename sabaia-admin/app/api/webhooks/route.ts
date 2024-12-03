@@ -19,11 +19,6 @@ const event =stripe.webhooks.constructEvent(
 
 if(event.type === "checkout.session.completed"){
     const session = event.data.object 
-console.log("[checkout_Post]", session);
-
-
-
-
 const customerInfo ={
     clerkId :session?.client_reference_id,
     name:session?.customer_details?.name,
@@ -37,9 +32,6 @@ const shippingAddress = {
     state: session?.shipping_details?.address?.state,
     country: session?.shipping_details?.address?.country,
   }
-
-
-
 
 
 const retrieveSession =await stripe.checkout.sessions.retrieve(
@@ -59,10 +51,6 @@ const orderItems = lineItems?.map((item:any)=>{
 
     await connectDB();
 const Shiping_Ratea =session?.shipping_cost?.shipping_rate
-console.log("📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛");
-console.log(Shiping_Ratea);
-
-
 
     const newOrder = new  OrderModal({
     customerClerkId: customerInfo.clerkId,
@@ -71,13 +59,8 @@ shippingAddress:shippingAddress,
 totalAmount:session.amount_total ? session.amount_total /100 : 0,
 shippingRate:session?.shipping_cost?.shipping_rate,
 })
-console.log("📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛📛");
-console.log(newOrder);
-
-
 
 await newOrder.save();
-
 let customer =await CustomerModal.findOne({clerkId:customerInfo.clerkId})
 
 if(customer){

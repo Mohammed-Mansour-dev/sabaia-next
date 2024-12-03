@@ -1,7 +1,7 @@
 import ProductForm from '@/app/_components/Products/ProductForm'
 import React from 'react'
 
-const page = () => {
+const NewProductPage = () => {
   return (
     <div>
         <ProductForm  />
@@ -9,4 +9,4 @@ const page = () => {
   )
 }
 
-export default page
+export default NewProductPage

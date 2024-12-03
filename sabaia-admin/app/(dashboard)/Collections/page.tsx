@@ -9,7 +9,7 @@ import { Plus } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
-const page = () => {
+const CollectionsPage = () => {
 
   const router =useRouter();
 
@@ -80,4 +80,4 @@ md:text-[16px] font-normal text-[14px]
   )
 }
 
-export default page
+export default CollectionsPage

@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 
 
-const page =  () => {
+const OrdersPage =  () => {
 
 const [loading , setLoading ] = useState(false)
 const [orders , setOrders ] = useState([])
@@ -46,5 +46,5 @@ useEffect(()=>{
   )
 }
 
-export default page
+export default OrdersPage
 export const dynamic = "force-dynamic";
